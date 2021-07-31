@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  mysql:
+    build: ./docker/mysql
+    container_name: sample_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sample
+      MYSQL_DATABASE: sample
+      MYSQL_USER: sample
+      MYSQL_PASSWORD: sample
+    volumes:
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./docker/mysql/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "53306:3306"
