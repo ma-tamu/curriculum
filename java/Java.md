@@ -1,0 +1,17 @@
+# Java
+* Java5からの追加された機能でよく使う機能を紹介
+  * Java5
+    * 総称型
+    * 拡張for
+    * 列挙型(enum)
+  * Java7
+    * try-with-resources
+    * 例外のマルチキャッチ
+    * Objects
+    * Path,Files
+  * Java8
+    * ラムダ式
+    * Stream
+    * 日付時刻API
+  * Java10
+    * var(ローカル変数の型推論)

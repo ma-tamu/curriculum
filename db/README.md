@@ -23,6 +23,7 @@
 # 演習実施のための環境構築
 * 前提dockerがインストールされていること。
 * ターミナルでdocker-compose.ymlのあるディレクトに移動して、下記のコマンド実行する。
+* curriculum/db/docker/mysql/initdb.d配下にある7zを解凍する。
   ```cmd
   docker-compose up -d
   ```
