@@ -38,6 +38,7 @@
 5. employees から grader が `M` 且つ birth_date が `1964/12/31` 未満のデータを取得し、`first_name` の昇順、 `hire_date` の降順に並び替えて取得。
 6. employees と salaries を結合さて、grader ごとの salary の平均を取得。
 7. departments ごとの salary の平均を取得。
-8. departments ごとの employees を取得
+8. departments ごとの employees を取得。
 9. departments に3万以上の employee が所属しているのを取得。
 10. employees,departments,title 使って `view` を作成。
+11. departments ごとの salary の平均を求め、平均以上のgraderごとの人数を取得。
