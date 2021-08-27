@@ -15,7 +15,7 @@
 2. Object obj;
 3. var obj = false;
 4. var obj = "null";
-5. 選択肢に回答がない
+5. 選択肢に回答がない。
 
 問3 次のプログラムをStreamを使用したプログラムに変換してください。
 ```java
@@ -45,7 +45,7 @@
 1. "str = hoge" と出力される。
 2. "str = hoge"<br/>"str != hoge" と出力される。
 3. "str != hoge" と出力される。
-4. コンパイルエラーになる
+4. コンパイルエラーになる。
 
 問5 次のプログラムを穴埋めして、 123 と出力してください。
 ```java
@@ -67,7 +67,7 @@
 01:public class App {
 02:  public static void main(String[] args) throws IOException {
 03:    final var file = new File("ファイルパス");
-04:    final InputStream is = null;
+04:    InputStream is = null;
 05:    try {
 06:      is = new FileInputStream(file);
 07:      // 処理
@@ -123,6 +123,6 @@
 ```
 1. hoge と出力される。
 2. コンパイルエラーになる。
-3. コンパイルは通るが実行するとエラーになる
+3. コンパイルは通るが実行するとエラーになる。
 
 問10 Java8以降で追加された機能を記載してください。
