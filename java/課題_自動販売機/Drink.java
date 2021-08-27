@@ -1,12 +1,8 @@
 public class Drink {
 
-    public String code;
-    public String name;
-    public Integer price;
-
-    public Drink() {
-
-    }
+    private final String code;
+    private final String name;
+    private final Integer price;
 
     public Drink(final String code, final String name, final int price) {
         this.code = code;
@@ -14,20 +10,8 @@ public class Drink {
         this.price = price;
     }
 
-    // public void setCode(final String code) {
-    // this.code = code;
-    // }
-    //
-    // public void setName(final String name) {
-    // this.name = name;
-    // }
-    //
-    // public void setPrice(final int price) {
-    // this.price = price;
-    // }
-
     public String getCode() {
-        return this.code;
+        return code;
     }
 
     public int getPrice() {
@@ -38,7 +22,11 @@ public class Drink {
         return name;
     }
 
-    public void setMenu() {
+    public void displayMenu() {
         System.out.println(name + " " + price);
+    }
+
+    public void selectMenu() {
+        System.out.println(name + ":" + code);
     }
 }
