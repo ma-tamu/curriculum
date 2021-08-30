@@ -1,0 +1,1 @@
+select * from sample.employees where birth_date >= '1960/04/01';
