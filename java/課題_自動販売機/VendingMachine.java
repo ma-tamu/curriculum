@@ -72,8 +72,18 @@ public class VendingMachine {
         }
     }
 
-    // 入金処理のメソッド
-    private static int depositProcess(final BufferedReader depositProcessBufferedReader, final int price, int deposit) throws NumberFormatException, IOException {
+    /**
+     * 入金処理のメソッド
+     * 
+     * @param depositProcessBufferedReader
+     * @param price
+     * @param deposit
+     * @return 金額が入力されたら、合計後のdepositが返される。それ以外はもう一度入力。
+     * @throws NumberFormatException
+     * @throws IOException
+     */
+    private static int depositProcess(final BufferedReader depositProcessBufferedReader, final int price, int deposit)
+        throws NumberFormatException, IOException {
         int charge = 0;
         while (deposit < price) {
             System.out.print("お金を入れてください:");
@@ -91,8 +101,16 @@ public class VendingMachine {
         return deposit;
     }
 
-    // 商品購入継続のメソッド
-    private static boolean continueBuying(final BufferedReader continueBuyingBufferedReader, final boolean IsContinueBuying) throws IOException {
+    /**
+     * 商品購入継続のメソッド,continueBuying
+     * 
+     * @param continueBuyingBufferedReader
+     * @param IsContinueBuying
+     * @return Yならtrue,Nならfalse,それ以外はもう一度
+     * @throws IOException
+     */
+    private static boolean continueBuying(final BufferedReader continueBuyingBufferedReader, final boolean IsContinueBuying)
+        throws IOException {
 
         do {
             System.out.print("商品購入を行いますか？行わない場合はお釣りを返却します。YorN :");
@@ -106,7 +124,14 @@ public class VendingMachine {
         } while (true);
     }
 
-    // ドリンク選択のメソッド
+    /**
+     * ドリンク選択のメソッド
+     * 
+     * @param drinkList
+     * @param selectDrinkBufferedReader
+     * @return codeが入力されたら、選んだドリンクのオプショナルが返される
+     * @throws IOException
+     */
     private static Drink select(final List<Drink> drinkList, final BufferedReader selectDrinkBufferedReader) throws IOException {
         Optional<Drink> selectProductOptinal = Optional.empty();
         drinkList.forEach(Drink::selectMenu);
@@ -115,9 +140,7 @@ public class VendingMachine {
             System.out.print("ドリンクのコードを入力してください。:");
             // キーボード入力を受け付ける
             final String inputCode = selectDrinkBufferedReader.readLine();
-            selectProductOptinal = drinkList.stream().filter(drink -> {
-                return inputCode.equals(drink.getCode());
-            }).findFirst();
+            selectProductOptinal = drinkList.stream().filter(drink -> inputCode.equals(drink.getCode())).findFirst();
 
         } while (selectProductOptinal.isEmpty());
         return selectProductOptinal.get();
