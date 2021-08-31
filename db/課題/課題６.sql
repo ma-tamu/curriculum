@@ -1,0 +1,1 @@
+SELECT gender,AVG(salary) FROM sample.employees LEFT OUTER JOIN sample.salaries ON sample.employees.emp_no = sample.salaries.emp_no GROUP BY gender;
