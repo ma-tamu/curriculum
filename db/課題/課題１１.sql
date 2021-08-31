@@ -1,4 +1,4 @@
-SELECT dep.dept_name, COUNT(em.gender)
+SELECT dep.dept_name, em.gender, COUNT(em.gender)
 FROM
     dept_emp AS depem
         LEFT OUTER JOIN
